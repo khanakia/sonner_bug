@@ -18,6 +18,6 @@ pnpm install
 pnpm dev
 ```
 
-- We import the UI Sonner Button here `src/apps/super/src/app/page.tsx`
-- `src/fasto/ui/src/components/SonnerButton.tsx` this file contains a button with toast
+- We import the UI Sonner Button here https://github.com/khanakia/sonner_bug/blob/main/src/apps/super/src/app/page.tsx
+- this file contains a button with toast https://github.com/khanakia/sonner_bug/blob/main/src/fasto/ui/src/components/SonnerButton.tsx
 - when toast is clicked from UI pkg it does not works
