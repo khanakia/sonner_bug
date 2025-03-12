@@ -1,0 +1,15 @@
+services:
+  api:
+    container_name: saasbytee
+    env_file:
+      - .env
+    build:
+      dockerfile: Dockerfile
+    image: saasbytee/sa
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    ports:
+      - 2305:2305
+    volumes:
+      - /app/node_modules
+      - .:/app

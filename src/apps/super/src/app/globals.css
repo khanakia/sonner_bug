@@ -1,0 +1,160 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  :root {
+    --primary: #0066cc;
+
+    --background: 210 20% 98%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 225 73% 57%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --danger: 0 100% 50%;
+    --danger-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+
+    --sidebar-width: 240px;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
+    overflow: hidden;
+  }
+
+  /* // antd desigin input override by tailwind so add custom class */
+  [type='text'],
+  input:where(:not([type])),
+  [type='email'],
+  [type='url'],
+  [type='password'],
+  [type='number'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='search'],
+  [type='tel'],
+  [type='time'],
+  [type='week'],
+  [multiple],
+  textarea,
+  select,
+  .ant-input {
+    @apply block w-full rounded-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply text-white bg-slate-900 rounded hover:text-white hover:bg-slate-700 focus:outline-none font-medium text-sm px-5 py-2 text-center inline-flex items-center dark:focus:ring-[#ee4429]/50;
+
+    &-main {
+      @apply rounded-full;
+    }
+
+    &-red {
+      @apply bg-red-500 hover:bg-red-600 rounded-full;
+    }
+
+    &-save {
+      @apply bg-green-600 hover:bg-green-500 rounded-full;
+    }
+
+    &-xs {
+      @apply py-1;
+    }
+
+    &-full {
+      @apply w-full text-center block;
+    }
+
+    &:disabled,
+    &[disabled] {
+      border: 1px solid #cccccc;
+      background-color: #cccccc;
+      color: #666666;
+    }
+  }
+
+  .ant-select-selection-search-input,
+  .ant-picker-input input {
+    box-shadow: none;
+    @apply focus:shadow-none focus:ring-offset-0 focus:ring-0;
+  }
+}
+
+.DataTableSelectFilter__input,
+.DataTableSelectFilter__input:focus {
+  box-shadow: none;
+}
+.DataTableSelectFilter__value-container {
+  padding: 0 4px !important;
+}
+.DataTableSelectFilter__indicator {
+  padding: 0 !important;
+}

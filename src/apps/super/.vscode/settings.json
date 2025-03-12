@@ -1,0 +1,29 @@
+{
+  "search.exclude": {
+    "**/.next": true,
+    "**/dist": true,
+    "**/yarn.lock": true
+  },
+  "editor.tabSize": 2,
+  "prettier.tabWidth": 2,
+  "prettier.printWidth": 80,
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.bracketSpacing": true,
+  "prettier.bracketSameLine": true,
+  "prettier.trailingComma": "all",
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "editor.formatOnSave": true,
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  // "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.includePackageJsonAutoImports": "on",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "files.associations": {
+    // "*.scss": "postcss"
+    // "*.css": "tailwindcss",
+    // "*.scss": "tailwindcss"
+  }
+}

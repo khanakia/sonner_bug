@@ -1,0 +1,5 @@
+packages:
+  - "src/apps/**/*"
+  - "src/fasto/*"
+  # if required, exclude some directories
+  - "!**/test/**"
